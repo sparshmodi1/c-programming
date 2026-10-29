@@ -119,7 +119,7 @@ int main(){
 void add(int arr[3][4],  int value){
     for(int i =0; i < 3; i++){
         for(int j =0; j < 4; j++){
-            if(arr[i][j] == 0){
+            if(arr[i][j] == 0 || arr[i][j] == -1){
                 arr[i][j] = value;
                 return;
             }
@@ -140,7 +140,7 @@ void delete(int arr[3][4], int r, int c) {
         return;
     }
 
-    arr[r][c] = 0;
+    arr[r][c] = -1;
 }
 
 void print2darr(int arr[3][4]){
